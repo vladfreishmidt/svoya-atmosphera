@@ -1,0 +1,554 @@
+body {
+  font-family: 'Bad Script', cursive;
+  text-align: center;
+  color: #141823;
+  /* background-color: #ffcfcf; */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  background: #fff;
+  padding: 2em;
+  box-shadow: 0 0 20px -10px;
+  width: 90%;
+  margin: 0 auto 3.125rem auto;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: rgba(255,207,207, .5);
+  box-shadow: 0 0 20px -10px;
+}
+
+/* ***************
+      HERO
+**************** */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  background:
+    linear-gradient(
+      rgba(241, 131, 140, .1),
+      rgba(241, 131, 140, .8)
+    ),
+    linear-gradient(
+      rgba(0, 0, 0, .1),
+      rgba(0, 0, 0, .4)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.nav-container {
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container img {
+  height: 35px;
+}
+
+.nav-container__contacts {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-top: 90px;
+}
+
+
+.nav-container__contacts-inner {
+  padding: 10px;
+}
+
+.nav-container__contacts-inner a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.nav-container__contacts-inner:hover a {
+  color: pink;
+}
+
+
+.nav-container__contacts i {
+  color: #fff;
+  font-size: 25px;
+
+}
+
+.phone-num {
+  font-family: 'PT Sans', sans-serif;
+  color: #fff;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.hero__text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+  animation: slideInLeft 1s ease-out;
+}
+
+.hero__text {
+  color: #fff;
+  margin: 0;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hero__text h1 {
+  font-size: 4.8rem;
+  margin-bottom: 30px;
+}
+
+.hero__text p {
+  font-size: 2.9rem;
+}
+
+/* ***************
+    Arrow Down Animation
+**************** */
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+  cursor: pointer;
+}
+
+.arrows path {
+	stroke: #fff;
+	fill: transparent;
+	stroke-width: 2px;
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s;
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s;
+}
+
+.arrows path.a3 {
+	animation-delay:0s;
+	-webkit-animation-delay:0s;
+}
+
+
+/* ***************
+    Arrow Down Animation End
+**************** */
+
+
+/* ***************
+    Scrollbar styles
+**************** */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f2878f;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #faa9a8;
+}
+/* ***************
+    Scrollbar styles End
+**************** */
+
+
+/* ***************
+      Benefits
+**************** */
+.benefits__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefit {
+  width: 30%;
+}
+
+.benefits__heading {
+  margin-bottom: 3.5rem;
+}
+
+.benefit__image {
+  max-width: 80px;
+}
+
+.benefit__title {
+  font-size: 1.8rem;
+}
+
+.benefit p {
+  font-family: 'PT Sans', sans-serif;
+}
+/* ***************
+      Benefits End
+**************** */
+
+
+/* ***************
+      Gallery
+**************** */
+
+/* ***************
+      Gallery End
+**************** */
+
+
+/* ***************
+      Contacts
+**************** */
+
+.contacts {
+
+}
+
+.contacts__icon {
+  max-width: 80px;
+}
+
+.process a, .contacts a {
+  font-family: 'PT Sans', sans-serif;
+  display: block;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  color: #141823;
+}
+
+.contact__social {
+  display: flex;
+      justify-content: space-between;
+      padding-left: 7rem;
+      padding-right: 7rem;
+      font-weight: 700;
+
+}
+/* ***************
+      Contacts End
+**************** */
+
+
+/* ***************
+      Testimonials
+**************** */
+
+.testimonials {
+  height: 300px;
+}
+.testimonial__single p {
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* ***************
+      Testimonials End
+**************** */
+
+
+/* ***************
+      Decor
+**************** */
+.decor__list li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.decor__list span {
+  font-size: 1.5rem;
+}
+
+.decor__list__image {
+  max-width: 60%;
+  border-radius: 10px;
+}
+/* ***************
+      Decor End
+**************** */
+
+
+/* ***************
+      Footer
+**************** */
+
+.footer {
+  max-width: 980px;
+  margin: 2rem auto 0;
+  background-color: #ca7f7f;
+  line-height: normal;
+  font-family: 'PT Sans', sans-serif;
+  padding: 20px;
+  color: #fff;
+
+  -moz-box-shadow: 0 0 8px 0px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 8px 0px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, .3);
+
+}
+
+.footer__social {
+  padding: 16px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__social a {
+  color: #fff;
+  font-size: 50px;
+  display: block;
+    transition: all .3s ease-out;
+}
+.footer__social a:hover {
+  transform: translateY(-3px);
+  color: pink;
+}
+
+footer address {
+  padding: 20px;
+
+}
+/* ***************
+      Footer End
+**************** */
+
+/* -------------------
+      ANIMATIONS
+------------------- */
+
+@keyframes slideInLeft {
+  0% {
+
+    opacity: 0;
+  }
+
+  100% {
+
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+
+  }
+}
+
+.slideInRight {
+  animation: slideInRight 1.5s ease-out;
+  /* transition: all 1s ease-out; */
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+  .hero__text h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero__text p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    padding: .5rem;
+  }
+
+  .hero__text p {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+.nav-container__contacts {
+  margin: 0;
+  align-items: baseline;
+  text-align: center;
+}
+  section {
+    padding: 1.4em;
+  }
+
+  .nav-container .logo {
+    display: none;
+  }
+
+    .nav-container {
+      display: block;
+      line-height: 35px;
+    }
+
+    .hero__text h1 {
+    font-size: 2.8rem;
+   }
+
+   .benefits__heading {
+     line-height: 2.5rem;
+   }
+
+   .benefits__list {
+      flex-direction: column;
+      justify-content: flex-start;
+   }
+
+   .benefit {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    .benefit__image {
+    max-width: 100px;
+}
+
+
+  #container > section.gallery > div > a > img {
+    width: 100%;
+  }
+
+  .decor__list li {
+    flex-direction: column;
+  }
+
+  #container > section.decor > ul > li:nth-child(1) {
+    flex-direction: column-reverse;
+  }
+
+  #container > section.decor > ul > li:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+
+  #container > section.decor > ul > li:nth-child(5) {
+    flex-direction: column-reverse;
+  }
+
+  .decor__list__image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact__social {
+    padding: 0;
+  }
+
+  .footer__social {
+    padding: 0;
+  }
+}
+
+
+/* ******************************
+             SLIDER
+******************************* */
+#slider {
+  width: 100%;
+  position: relative;
+}
+.slider__item {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.9);
+}
+
+.showing {
+  opacity: 1;
+  z-index: 1;
+  transform: none;
+}
